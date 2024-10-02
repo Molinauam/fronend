@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="assets/styless/master.css">
+    <script src="/assets/js/jquery.3.7.1.min.js"></script>
+    <script src="/assets/js/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <main class="dashboard">
+        <!-- Inicio barra navegación -->
+        <nav class="sidebar">
+            <div class="sidebar-content">
+                <div class="sidebar-item">
+                    Inicio
+                </div>
+                <div class="sidebar-item">
+                    Usuarios
+                    <div class="submenu">
+                        <div class="submenu-item">Agregar Usuario</div>
+                        <div class="submenu-item">Ver Usuarios</div>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- Fin barra navegación -->
+
+        <!-- Inicio contenido principal -->
+        <div class="main-content">
+            <!-- Inicio cabecera -->
+            <header class="header">
+                <button class="menu-toggle" id="menu-toggle">☰</button>
+                <div class="header-title">Nombre del Módulo</div>
+                <div class="dropdown-menu">
+                    <button class="dropdown-item">Opciones</button>
+                    <button class="dropdown-item">Configuración</button>
+                    <button class="dropdown-item">Cerrar Sesión</button>
+                </div>
+            </header>
+            <!-- Fin cabecera -->
+
+            <!-- Inicio área contenido -->
+            <div class="content">
+                <div class="card">
+                    <div class="card-content">
+                        <h3>Nombre completo:</h3>
+                        <p>Tipo de documento:</p>
+                        <p>Documento:</p>
+                        <p>ID:</p>
+                        <p>Rol:</p>
+                        <p>Estado:</p>
+                    </div>
+                    <div class="card-actions">
+                        <button class="edit-btn">Editar</button>
+                        <button class="delete-btn">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+            <!-- Fin área contenido -->
+        </div>
+        <!-- Fin contenido principal -->
+    </main>
+</body>
+</html>

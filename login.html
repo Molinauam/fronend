@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inicio de sesión</title>
+    <link rel="stylesheet" href="/assets/styless/style.css">
+    <script src="/assets/js/jquery-3.7.1.min.js"></script>
+    <script src="/assets/js/sweetalert2.all.min.js"></script>
+</head>
+<body>
+    <main class="login">
+        <h1>Inicio de sesión</h1>
+        <form id="formLogin">
+            <input type="text" name="fullName" placeholder="Nombre Completo" required>
+            <select name="documentType" required>
+                <option value="ti">T.I</option>
+                <option value="cc" selected>C.C</option>
+                <option value="ce">C.E</option>
+            </select>
+            <input type="text" name="documentNumber" placeholder="Número de Documento" required>
+            <input type="password" name="password" placeholder="Ingrese su contraseña" required>
+            <input type="text" name="status" value="Activo" hidden>
+            <button type="submit">Iniciar sesión</button>
+        </form>
+    </main>
+    <script src="/assets/js/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,122 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    display: flex;
+    height: 100vh;
+    overflow: hidden;
+    background-color: rgb(34, 45, 45);
+}
+
+.dashboard {
+    display: flex;
+    width: 100%;
+    position: relative;
+}
+
+.sidebar {
+    width: 250px;
+    background-color: #fff;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 60px;
+    left: 0;
+    height: calc(100% - 60px); /* Corregido */
+    transition: transform 0.3s ease; /* Corregido */
+    transform: translateX(0);
+    z-index: 999;
+    border: none;
+    box-shadow: none;
+}
+
+.sidebar.hidden {
+    transform: translateX(-100%);
+}
+
+.sidebar-content {
+    flex-direction: column;
+    padding: 20px;
+}
+
+.sidebar-item {
+    padding: 10px;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s ease, border-radius 0.3s ease;
+    position: relative;
+}
+
+.sidebar-item:hover {
+    background-color: aliceblue;
+    border-radius: 0 15px 15px 0;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    padding-left: 20px;
+}
+
+.sidebar-item.active .submenu {
+    max-height: 200px;
+}
+
+.submenu-item {
+    padding: 10px;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s ease;
+    border-radius: 4px;
+}
+
+.submenu-item:hover {
+    background-color: gray;
+}
+
+.submenu-item.active {
+    background-color: gray;
+}
+
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    transition: margin-left 0.3s ease;
+    margin-left: 250px;
+}
+
+.main-content.shifted {
+    margin-left: 0;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    border: none;
+    box-shadow: none;
+}
+
+.header-title {
+    font-size: 1.2em;
+    flex: 1;
+    margin-left: 10px;
+}
+
+.dropdown-menu {
+    background: #fff;
+    width: 200px;
+    color: #333;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-shadow: none;
+}
